@@ -23,5 +23,5 @@ if __name__ == '__main__':
             out_filepath = os.path.join(outdir, publisher, filename)
             try:
                 xml_to_csv(filepath, out_filepath)
-            except (etree.XMLSyntaxError, KeyError) as _:
+            except (etree.XMLSyntaxError, KeyError, TypeError) as _:
                 pass
